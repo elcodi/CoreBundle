@@ -16,7 +16,7 @@
         },
         {
             "name": "Symfony Community",
-            "homepage": "https://github.com/elcodi/CartBundle/contributors"
+            "homepage": "https://github.com/elcodi/CoreBundle/contributors"
         }
     ],
     "require": {
