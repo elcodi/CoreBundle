@@ -12,14 +12,14 @@
  * @version ##version_placeholder##
  */
 
-namespace Elcodi\CoreBundle\Tests\Functional\Generator;
+namespace Elcodi\CoreBundle\Tests\Functional\Services;
 
 use Elcodi\CoreBundle\Tests\WebTestCase;
 
 /**
- * Class Sha1GeneratorTest
+ * Class ManagerProviderTest
  */
-class Sha1GeneratorTest extends WebTestCase
+class ManagerProviderTest extends WebTestCase
 {
     /**
      * Returns the callable name of the service
@@ -28,6 +28,6 @@ class Sha1GeneratorTest extends WebTestCase
      */
     public function getServiceCallableName()
     {
-        return 'elcodi.core.core.generator.sha1';
+        return 'elcodi.core.core.service.manager_provider';
     }
 }

@@ -12,14 +12,14 @@
  * @version ##version_placeholder##
  */
 
-namespace Elcodi\CoreBundle\Tests\Functional\Generator;
+namespace Elcodi\CoreBundle\Tests\Functional\Factory;
 
 use Elcodi\CoreBundle\Tests\WebTestCase;
 
 /**
- * Class Sha1GeneratorTest
+ * Class LanguageFactoryTest
  */
-class Sha1GeneratorTest extends WebTestCase
+class LanguageFactoryTest extends WebTestCase
 {
     /**
      * Returns the callable name of the service
@@ -28,6 +28,17 @@ class Sha1GeneratorTest extends WebTestCase
      */
     public function getServiceCallableName()
     {
-        return 'elcodi.core.core.generator.sha1';
+        return 'elcodi.core.core.factory.language';
+    }
+
+    /**
+     * Test language factory provider
+     */
+    public function testFactoryProvider()
+    {
+        $this->assertInstanceOf(
+            $this->container->getParameter('elcodi.core.core.entity.language.class'),
+            $this->container->get('elcodi.core.core.entity.language.instance')
+        );
     }
 }
