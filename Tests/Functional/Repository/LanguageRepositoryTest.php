@@ -12,14 +12,14 @@
  * @version ##version_placeholder##
  */
 
-namespace Elcodi\CoreBundle\Tests\Functional\Factory;
+namespace Elcodi\CoreBundle\Tests\Functional\Repository;
 
 use Elcodi\CoreBundle\Tests\WebTestCase;
 
 /**
- * Class LanguageFactoryTest
+ * Class LanguageRepositoryTest
  */
-class LanguageFactoryTest extends WebTestCase
+class LanguageRepositoryTest extends WebTestCase
 {
     /**
      * Returns the callable name of the service
@@ -29,30 +29,30 @@ class LanguageFactoryTest extends WebTestCase
     public function getServiceCallableName()
     {
         return [
-            'elcodi.core.core.factory.language',
-            'elcodi.factory.language',
+            'elcodi.core.core.repository.language',
+            'elcodi.repository.language',
         ];
     }
 
     /**
-     * Test language factory provider
+     * Test language repository provider
      */
     public function testFactoryProvider()
     {
         $this->assertInstanceOf(
-            $this->container->getParameter('elcodi.core.core.entity.language.class'),
-            $this->container->get('elcodi.core.core.entity.language.instance')
+            $this->container->getParameter('elcodi.core.core.repository.language.class'),
+            $this->container->get('elcodi.core.core.repository.language')
         );
     }
 
     /**
-     * Test language factory provider alias
+     * Test language repository provider alias
      */
     public function testFactoryProviderAlias()
     {
         $this->assertInstanceOf(
-            $this->container->getParameter('elcodi.core.core.entity.language.class'),
-            $this->container->get('elcodi.entity.language.instance')
+            $this->container->getParameter('elcodi.core.core.repository.language.class'),
+            $this->container->get('elcodi.repository.language')
         );
     }
 }
