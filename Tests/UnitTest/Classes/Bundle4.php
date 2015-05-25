@@ -15,7 +15,7 @@
  * @author Elcodi Team <tech@elcodi.com>
  */
 
-namespace Elcodi\Bundle\CoreBundle\Tests\Functional\Classes;
+namespace Elcodi\Bundle\CoreBundle\Tests\UnitTest\Classes;
 
 /**
  * Class Bundle4
